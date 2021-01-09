@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'Proxima',
           primaryColor: Colors.white,
-          backgroundColor: Color.fromRGBO(68, 201, 159, 1),
-          cardColor: Color.fromRGBO(13, 27, 64, 0.9),
+          backgroundColor: Color.fromRGBO(42, 175, 138, 1),
+          cardColor: Color.fromRGBO(58, 68, 140, 1),
         ),
         home: MyHomeScreen(),
       ),

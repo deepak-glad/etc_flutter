@@ -103,6 +103,10 @@ class SliderDetail extends StatelessWidget {
                           )
                         ],
                       ),
+                      Text(
+                        '|',
+                        style: TextStyle(fontSize: 25, color: Colors.grey),
+                      ),
                       Column(
                         children: [
                           Text('valid until'),
@@ -115,6 +119,10 @@ class SliderDetail extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           )
                         ],
+                      ),
+                      Text(
+                        '|',
+                        style: TextStyle(fontSize: 25, color: Colors.grey),
                       ),
                       Column(
                         children: [
