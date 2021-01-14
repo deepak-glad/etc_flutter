@@ -11,10 +11,11 @@ class Categories extends StatelessWidget {
   Widget build(BuildContext context) {
     var data = Provider.of<Data>(context);
     return Container(
-      height: 190,
+      height: MediaQuery.of(context).size.height / 3 - 40,
       child: GridView.builder(
         physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          mainAxisSpacing: 0.5,
           crossAxisCount: 3,
           childAspectRatio: 1.4,
         ),

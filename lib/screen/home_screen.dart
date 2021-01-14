@@ -113,6 +113,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                                           color:
                                               Theme.of(context).primaryColor),
                                     ),
+                                    elevation: 0,
                                     centerTitle: true,
                                     backgroundColor:
                                         Theme.of(context).backgroundColor,

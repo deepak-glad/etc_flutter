@@ -1,3 +1,4 @@
+import 'package:etc_flutter/widgets/setting.dart';
 import 'package:flutter/material.dart';
 
 class DrawerBar extends StatefulWidget {
@@ -55,7 +56,9 @@ class _DrawerBarState extends State<DrawerBar> {
                     fontSize: 20,
                     fontWeight: FontWeight.w500),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).pushNamed(SettingPage.routeName);
+              },
             ),
             ListTile(
               leading: Icon(
