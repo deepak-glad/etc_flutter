@@ -1,6 +1,8 @@
 import 'package:etc_flutter/helper/profile_detail.dart';
 import 'package:etc_flutter/helper/topics_setting.dart';
 import 'package:etc_flutter/helper/transaction.dart';
+import 'package:etc_flutter/subHelper/change_password.dart';
+import 'package:etc_flutter/subHelper/mobilenumber.dart';
 import 'package:etc_flutter/widgets/setting.dart';
 import 'package:etc_flutter/model/model.dart';
 import 'package:etc_flutter/model/slider_model.dart';
@@ -35,6 +37,8 @@ class MyApp extends StatelessWidget {
           Topics.routeName: (ctx) => Topics(),
           ProfileDetail.routeName: (ctx) => ProfileDetail(),
           Transaction.routeName: (ctx) => Transaction(),
+          MobileNumber.routeName: (ctx) => MobileNumber(),
+          ChangePassword.routeName: (ctx) => ChangePassword(),
         },
       ),
     );

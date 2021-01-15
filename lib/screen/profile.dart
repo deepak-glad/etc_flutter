@@ -83,30 +83,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Stack(
                   children: [
                     Container(
-                        height: 150,
-                        padding: const EdgeInsets.all(15),
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).cardColor,
-                            borderRadius: BorderRadius.circular(20),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black54,
-                                blurRadius: 0.5,
-                                // spreadRadius: .5,
-                              ),
-                            ]),
-                        child: Column(
-                          children: [
-                            Text(
-                              'Expats Teachers Club',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Theme.of(context).primaryColor,
-                                  fontWeight: FontWeight.bold),
+                      height: 150,
+                      padding: const EdgeInsets.all(15),
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).cardColor,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black54,
+                              blurRadius: 0.5,
+                              // spreadRadius: .5,
                             ),
-                          ],
-                        )),
+                          ]),
+                    ),
                     // ClipRRect(
                     //   borderRadius: BorderRadius.horizontal(left: ),
                     // ),
@@ -126,7 +116,74 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             // shape: BoxShape.circle,
                             color: Colors.green,
                           ),
-                        ))
+                        )),
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Text(
+                                'Expats Teachers Club',
+                                overflow: TextOverflow.clip,
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Theme.of(context).primaryColor,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Container(
+                              color: Colors.yellow,
+                              height: 90,
+                              width: 130,
+                              margin: const EdgeInsets.only(left: 15, top: 30),
+                              child: Image.asset(
+                                'assets/etc_image/pub.jpg',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(6.0),
+                              child: Text(
+                                'etcewardsters@gm',
+                                style: TextStyle(
+                                    color: Theme.of(context).primaryColor),
+                              ),
+                            )
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              'EXPATS SCHOOL',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: Theme.of(context).primaryColor),
+                            ),
+                            SizedBox(height: 5),
+                            Text('Texter Pal',
+                                style: TextStyle(
+                                    color: Theme.of(context).primaryColor)),
+                            Text('ID:ETC_1235452_5285',
+                                style: TextStyle(
+                                    color: Theme.of(context).primaryColor)),
+                            SizedBox(height: 5),
+                            Text('Member Since',
+                                style: TextStyle(
+                                    color: Theme.of(context).primaryColor)),
+                            Text('16 Dec 2020 14:32',
+                                style: TextStyle(
+                                    color: Theme.of(context).primaryColor)),
+                            Container(
+                              height: 80,
+                              width: 80,
+                              child: Image.asset('assets/etc_image/pub.jpg'),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
