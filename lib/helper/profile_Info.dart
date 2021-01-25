@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'package:etc_flutter/subHelper/change_password.dart';
+import 'package:etc_flutter/subHelper/image.dart';
 import 'package:etc_flutter/subHelper/mobilenumber.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +12,11 @@ class ProfileDetail extends StatefulWidget {
 }
 
 class _ProfileDetailState extends State<ProfileDetail> {
+  var _pickedImage;
+  void _selectImage(File pickedImage) {
+    _pickedImage = pickedImage;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,24 +34,10 @@ class _ProfileDetailState extends State<ProfileDetail> {
           children: [
             Container(
                 height: 180,
-                // width: 150,
+                width: MediaQuery.of(context).size.width,
                 color: Theme.of(context).backgroundColor,
-                child: Column(
-                  children: [
-                    Container(
-                        margin: const EdgeInsets.only(left: 120),
-                        child: IconButton(
-                          icon: Icon(
-                            Icons.edit,
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          onPressed: () {},
-                        )),
-                    Center(
-                      child:
-                          Image.asset('assets/etc_image/pub.jpg', height: 100),
-                    ),
-                  ],
+                child: Container(
+                  child: UserImagePicker(_selectImage),
                 )),
             Container(
                 padding: const EdgeInsets.only(left: 30, right: 20, top: 15),

@@ -45,8 +45,9 @@ class SliderDetail extends StatelessWidget {
                       height: 120,
                       width: MediaQuery.of(context).size.width,
                     ),
-                    Padding(
+                    Container(
                       padding: const EdgeInsets.all(12.0),
+                      width: MediaQuery.of(context).size.width - 20,
                       child: Row(
                         children: [
                           Image.asset(

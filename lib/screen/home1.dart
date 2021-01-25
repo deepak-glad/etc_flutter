@@ -3,7 +3,7 @@ import 'package:etc_flutter/helper/slider_container.dart';
 import 'package:etc_flutter/widgets/search.dart';
 import 'package:flutter/material.dart';
 
-import 'carousel_slider.dart';
+import '../widgets/carousel_slider.dart';
 
 class Home1 extends StatefulWidget {
   @override

@@ -4,8 +4,9 @@ import 'package:etc_flutter/screen/map.dart';
 import 'package:etc_flutter/screen/notification.dart';
 import 'package:etc_flutter/screen/offer.dart';
 import 'package:etc_flutter/screen/profile.dart';
+import 'package:etc_flutter/widgets/bottommodelshet.dart';
 import 'package:etc_flutter/widgets/drawer.dart';
-import 'package:etc_flutter/widgets/home1.dart';
+import 'package:etc_flutter/screen/home1.dart';
 import 'package:flutter/material.dart';
 
 class MyHomeScreen extends StatefulWidget {
@@ -54,6 +55,15 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                     backgroundColor: Theme.of(context).backgroundColor,
                     iconTheme:
                         IconThemeData(color: Theme.of(context).primaryColor),
+                    actions: [
+                      IconButton(
+                        icon: Icon(Icons.filter_list),
+                        onPressed: () => showModalBottomSheet(
+                          context: context,
+                          builder: (context) => BottomModel(),
+                        ),
+                      )
+                    ],
                   )
                 : _currentIndex == 2
                     ? AppBar(
@@ -66,6 +76,15 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                         backgroundColor: Theme.of(context).backgroundColor,
                         iconTheme: IconThemeData(
                             color: Theme.of(context).primaryColor),
+                        actions: [
+                          IconButton(
+                            icon: Icon(Icons.filter_list),
+                            onPressed: () => showModalBottomSheet(
+                              context: context,
+                              builder: (context) => BottomModel(),
+                            ),
+                          )
+                        ],
                       )
                     : _currentIndex == 3
                         ? AppBar(
@@ -151,19 +170,19 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
                 BottomNavigationBarItem(
                     icon: _currentIndex != 1
                         ? Icon(
-                            Icons.local_offer_outlined,
+                            Icons.list_alt,
                           )
                         : Icon(
-                            Icons.local_offer,
+                            Icons.list,
                           ),
                     label: 'Offer'),
                 BottomNavigationBarItem(
                     icon: _currentIndex != 2
                         ? Icon(
-                            Icons.location_city_outlined,
+                            Icons.location_pin,
                           )
                         : Icon(
-                            Icons.location_city,
+                            Icons.my_location_sharp,
                           ),
                     label: 'location'),
                 BottomNavigationBarItem(

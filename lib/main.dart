@@ -1,4 +1,4 @@
-import 'package:etc_flutter/helper/profile_detail.dart';
+import 'package:etc_flutter/helper/profile_Info.dart';
 import 'package:etc_flutter/helper/topics_setting.dart';
 import 'package:etc_flutter/helper/transaction.dart';
 import 'package:etc_flutter/subHelper/change_password.dart';
